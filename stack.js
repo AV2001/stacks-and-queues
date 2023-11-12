@@ -60,7 +60,9 @@ class Stack {
 
     /** isEmpty(): return true if the stack is empty, otherwise false */
 
-    isEmpty() {}
+    isEmpty() {
+        return !this.first;
+    }
 }
 
 module.exports = Stack;
