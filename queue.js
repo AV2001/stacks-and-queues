@@ -65,7 +65,9 @@ class Queue {
 
     /** isEmpty(): return true if the queue is empty, otherwise false */
 
-    isEmpty() {}
+    isEmpty() {
+        return !this.first;
+    }
 }
 
 module.exports = Queue;
