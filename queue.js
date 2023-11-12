@@ -19,7 +19,20 @@ class Queue {
 
     /** enqueue(val): add new value to end of the queue. Returns undefined. */
 
-    enqueue(val) {}
+    enqueue(val) {
+        const newNode = new Node(val);
+
+        if (!this.first) {
+            this.first = newNode;
+            this.last = newNode;
+        } else {
+            this.last.next = newNode;
+            this.last = newNode;
+        }
+
+        this.size++;
+        return undefined;
+    }
 
     /** dequeue(): remove the node from the start of the queue
      * and return its value. Should throw an error if the queue is empty. */
